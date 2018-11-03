@@ -12,3 +12,4 @@ node() {
    stage('build'){
 	  nodeJS.nvm('install')
       }
+}
