@@ -13,6 +13,6 @@ node() {
 
    stage('build'){
 	 
-	   nodeJS.npm('install')
+	   nodeJS.npm('install','opts = /usr/local/bin/')
       }
 }
