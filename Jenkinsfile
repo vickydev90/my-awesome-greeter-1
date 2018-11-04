@@ -15,5 +15,6 @@ node() {
 	 
 	   nodeJS.npm('install --save-dev typescript')
 	   nodeJS.npmRun('build', config)
+	   nodeJS.publishNexus('qa', config )
       }
 }
