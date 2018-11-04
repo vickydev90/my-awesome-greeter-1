@@ -10,7 +10,9 @@ node() {
 
           checkout scm
        }
+
    stage('build'){
-	  nodeJS.npm('install')
+	 
+	   nodeJS.npm('install')
       }
 }
