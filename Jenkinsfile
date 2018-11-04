@@ -14,5 +14,6 @@ node() {
    stage('build'){
 	 
 	   nodeJS.npm('install')
+	   nodeJS.npmRun('release')
       }
 }
