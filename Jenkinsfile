@@ -12,8 +12,9 @@ node() {
        }
 
    stage('build'){
-	 
-	   nodeJS.npm('install --save-dev typescript', config)
+	   def workspace = ${WORKSPACE}
+           echo "Workspace is ${workspace}
+	   nodeJS.npm('install --save-dev typescript', workspace)
 	   nodeJS.npmRun('build')
       }
 }
