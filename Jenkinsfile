@@ -20,4 +20,5 @@ pipeline
 	   	nodeJS.npmRun('build')
 	     }	
           }	
+    }
 }
