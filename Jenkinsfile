@@ -1,8 +1,8 @@
 #!/usr/bin/groovy
 
-@Library('jenkins-pipeline-library')
+@Library('npmBuild_nix')
 
-def nodeJS = new de.mare.ci.jenkins.NodeJS()
+def nodeJS = new var.NodeJS()
 
 node() {
 
