@@ -4,13 +4,11 @@
 def nodeJS = new com.jenkins.library.NodeJS()
 def config = "conf/config.json"
 
-pipeline
-{
-  agent { any }
-   
+pipeline {
+  agent any  
     stages {
-  	 stage('Checkout'){
-	     steps{
+  	 stage('Checkout') {  
+	     steps {
 		checkout scm
 	     }
          }
