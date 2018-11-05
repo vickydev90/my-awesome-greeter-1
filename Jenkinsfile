@@ -2,6 +2,7 @@
 
 @Library('npmBuild_nix')
 def nodeJS = new com.jenkins.library.NodeJS()
+def config = "conf/config.json"
 
 node() {
 
@@ -12,7 +13,7 @@ node() {
 
    stage('build'){
 	 
-	   nodeJS.npm('install --save-dev typescript')
+	   nodeJS.npm('install --save-dev typescript', config)
 	   nodeJS.npmRun('build')
       }
 }
