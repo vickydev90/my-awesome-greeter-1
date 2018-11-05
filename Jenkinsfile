@@ -2,7 +2,7 @@
 
 @Library('npmBuild_nix')
 
-def nodeJS = new var.NodeJS()
+def nodeJS = var.NodeJS()
 
 node() {
 
