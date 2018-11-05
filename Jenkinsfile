@@ -2,7 +2,7 @@
 
 @Library('npmBuild_nix')
 def nodeJS = new com.jenkins.library.NodeJS()
-def config = "${WORKSPACE}/conf/config.json"
+def config = "conf/config.json"
 
 node() {
 
