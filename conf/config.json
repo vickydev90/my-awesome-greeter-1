@@ -10,5 +10,5 @@
   "environments": {
      "targetEnv": "qa"
  },
- "prefix: "/usr/local/bin/"
+ "prefix": "/usr/local/bin/"
 }
