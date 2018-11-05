@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 
 @Library('npmBuild_nix')
-
+def nodeJS = new com.jenkins.library.NodeJS()
 
 node() {
 
