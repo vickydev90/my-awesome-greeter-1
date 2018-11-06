@@ -15,8 +15,8 @@ pipeline {
          stage('build') {
               steps {
 		script {
-	   	nodeJS.npm('install --save-dev typescript')
-	   	nodeJS.npmRun('build')
+	   	  nodeJS.npm('install --save-dev typescript')
+	   	  nodeJS.npmRun('build')
 	        }
 	     }	
           }	
