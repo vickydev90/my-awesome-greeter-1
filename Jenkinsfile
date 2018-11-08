@@ -18,7 +18,6 @@ pipeline {
 		script {
 	   	  nodeJS.npm('install --save-dev typescript')
 	   	  nodeJS.npmRun('build')
-		  nodeJS.json(configuration)
 	        }
 	     }	
           }	
