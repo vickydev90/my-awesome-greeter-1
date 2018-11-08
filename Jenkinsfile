@@ -2,7 +2,8 @@
 
 @Library('npmBuild_nix')
 def nodeJS = new com.jenkins.library.NodeJS()
-def config = "conf/config.json"
+
+configuration = 'conf/config.json'
 
 pipeline {
   agent any  
@@ -17,6 +18,7 @@ pipeline {
 		script {
 	   	  nodeJS.npm('install --save-dev typescript')
 	   	  nodeJS.npmRun('build')
+		  nodeJS.json('configuration')
 	        }
 	     }	
           }	
