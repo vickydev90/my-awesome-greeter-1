@@ -18,7 +18,7 @@ pipeline {
               script {
 	   	  nodeJS.npm('install --save-dev typescript', configuration)
 	   	  nodeJS.npmRun('build')
-	   	  nodeJS.packHandler('release', integration, configuration)
+	   	  nodeJS.packHandler('release', 'integration', configuration)
 	     }
 	     }	
           }	
