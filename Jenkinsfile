@@ -3,7 +3,7 @@
 @Library('npmBuild_nix')
 def nodeJS = new com.jenkins.library.NodeJS()
 
-def configuaaaaaaaaaaaaaaaaaaration = "/conf/config.json"
+def configuration = "/conf/config.json"
 
 pipeline {
   agent any  
