@@ -13,14 +13,20 @@ pipeline {
 		checkout scm
 	     }
          }
-         stage('build') {
-              steps {
-              script {
+     stage('build') {
+         steps {
+           script {
 	   	  nodeJS.npm('install --save-dev typescript', configuration)
 	   	  nodeJS.npmRun('build')
-	   	  nodeJS.packHandler('release', 'integration', configuration)
 	     }
 	     }	
-          }	
+          }
+      stage('package') {
+		  steps {
+		      nodeJS.packHandler('release', 'integration', configuration)
+		  }
+
+      }
+	
     }
 }
