@@ -3,7 +3,7 @@
 @Library('npmBuild_nix')
 def nodeJS = new com.jenkins.library.NodeJS()
 
-def configuration = "/conf/config.json"
+def configuaaaaaaaaaaaaaaaaaaration = "/conf/config.json"
 
 pipeline {
   agent any  
@@ -23,7 +23,9 @@ pipeline {
           }
       stage('package') {
 		  steps {
-		      nodeJS.packHandler('release', 'integration', configuration)
+		  	script {
+		  nodeJS.packHandler('release', 'integration', configuration)		 
+		  	}
 		  }
 
       }
