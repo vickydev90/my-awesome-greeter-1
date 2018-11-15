@@ -10,5 +10,10 @@
   "environments": {
      "targetEnv": "qa"
  },
- "prefix": "/usr/local/bin/"
+ "prefix": "/usr/local/bin/",
+ "npm_var": {
+ 	"progress": "false",
+ 	"tmp": "~/tmp",
+ 	"prefix": "/usr/local"	
+  }
 }
