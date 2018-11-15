@@ -18,17 +18,10 @@ pipeline {
            script {
 	   	  nodeJS.npm('install --save-dev typescript', configuration)
 	   	  nodeJS.npmRun('build')
+	   	  nodeJS.EnvVar(configuration)
 	     }
 	     }	
           }
-      stage('package') {
-		  steps {
-		  	script {
-		  nodeJS.packHandler('release', 'integration', configuration)		 
-		  	}
-		  }
-
-      }
 	
     }
 }
