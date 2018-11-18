@@ -3,7 +3,6 @@ set -ex
 WORKSPACE=${WORKSPACE:-`pwd`}
 artifact=$1
 
-source ${WORKSPACE}/pipelines/scripts/functions
 
 
 

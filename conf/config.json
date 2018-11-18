@@ -13,7 +13,7 @@
  "prefix": "/usr/local/bin/",
  "npm_var": {
  	"progress": "false",
- 	"tmp": "~/tmp",
+ 	"tmp": "'~/tmp'",
  	"prefix": "/usr/local"	
   }
 }
