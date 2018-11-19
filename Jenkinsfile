@@ -18,6 +18,7 @@ pipeline {
            script {
 	   	  nodeJS.npm('install --save-dev typescript', configuration)
 	   	  nodeJS.npmRun('build', 'release', 'qa', configuration)
+	   	  nodeJS.publishNexus(release, integration, configuration)
 	     }
 	     }	
           }
