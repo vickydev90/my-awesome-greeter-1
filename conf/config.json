@@ -4,8 +4,8 @@
     "dir": "dist-release"
   },
   "nexus": {
-    "url": "http://localhost:8081/nexus/content/repositories/releases/",
-    "credentials": "nexusrepo"
+    "url": "localhost:8081/nexus",
+    "credentials": "nexusLocal"
   },
   "environments": {
      "targetEnv": "qa"
