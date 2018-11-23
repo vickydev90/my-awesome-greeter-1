@@ -17,9 +17,11 @@ pipeline {
          }
      stage('init') {
          steps {
-             echo "Checking git workflow"
+         	script {
+         	 echo "Checking git workflow"
              String gitWorkFlow = gitWorkFlowTypeByBranchRule()
-             echo "gitWorkFlow: ${gitWorkFlow}"
+             echo "gitWorkFlow: ${gitWorkFlow}"   
+         	}
          }
 
      }
