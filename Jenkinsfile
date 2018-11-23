@@ -15,15 +15,14 @@ pipeline {
 		checkout scm
 	     }
          }
-     stage ('Init') {
-    	steps {
-        	script {
-            	echo "Checking git workflow"
-            	String gitWorkFlow = gitWorkFlowTypeByBranchRule()
-            	echo "gitWorkFlow: ${gitWorkFlow}"
-        }
-    }
-}
+     stage('init') {
+         steps {
+             echo "Checking git workflow"
+             String gitWorkFlow = gitWorkFlowTypeByBranchRule()
+             echo "gitWorkFlow: ${gitWorkFlow}"
+         }
+
+     }
      stage('build') {
          steps {
            script {
@@ -33,6 +32,5 @@ pipeline {
 	     }
 	     }	
           }
-	
     }
 }
