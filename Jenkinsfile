@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 
-@Library('npmBuild_nix')
+//@Library('npmBuild_nix')
 //@Library('workflow_gt')
 @Library('gitflowEnablers_multi')
 
