@@ -1,7 +1,8 @@
 #!/usr/bin/groovy
 
 @Library('npmBuild_nix')
-@Library('workflow_gt')
+//@Library('workflow_gt')
+@Library('gitflowEnablers_multi')
 
 def nodeJS = new com.jenkins.library.NodeJS()
 
