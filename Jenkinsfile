@@ -29,7 +29,7 @@ pipeline {
      stage('build') {
          steps {
            script {
-	   	     nodeJS.npm('install --save-dev typescript', configuration)
+	   	     nodeJS.npm('install --save-dev typescript')
 	   	     nodeJS.npmRun('build', 'release', 'integration', configuration)
 	   	     nodeJS.publishNexus('release', 'integration', configuration)
 	     }
