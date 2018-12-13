@@ -4,7 +4,7 @@
 @Library('workflow_gt')
 //@Library('gitflowEnablers_multi')
 
-//def nodeJS = new com.jenkins.library.NodeJS()
+def nodeJS = new com.jenkins.library.NodeJS()
 
 def configuration = "/conf/config.json"
 
