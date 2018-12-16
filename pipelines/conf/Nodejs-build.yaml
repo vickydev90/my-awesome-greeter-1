@@ -1,0 +1,11 @@
+application: test123
+distribution:
+    dir: dist-release
+nexus:
+  url: localhost:8081/nexus
+  credentials: nexusLocal
+environments:
+     targetEnv: qa
+     targetbranch: 
+prefix: /usr/local/bin
+
