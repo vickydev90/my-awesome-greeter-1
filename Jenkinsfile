@@ -16,21 +16,22 @@ pipeline {
 		checkout scm
 	     }
          }
-     stage('init') {
-         steps {
-           script {
-         	 echo "Checking git workflow"
-             String gitWorkFlow = gitWorkFlowTypeByBranchRule()
-             echo "gitWorkFlow: ${gitWorkFlow}"   
-         	}
-         }
+     //stage('init') {
+       //  steps {
+         //  script {
+         //	 echo "Checking git workflow"
+         //    String gitWorkFlow = gitWorkFlowTypeByBranchRule()
+         //    echo "gitWorkFlow: ${gitWorkFlow}"   
+         //	}
+        // }
 
-      }
+     // }
      stage('build') {
          steps {
            script {
 	   	     nodeJS.npm('install --save-dev typescript')
 	   	     nodeJS.npmRun('build', 'release', 'integration', configuration)
+	   	     nodeJS.branchname()
 	   	     nodeJS.publishNexus('release', 'integration', configuration)
 	     }
 	     } 	
