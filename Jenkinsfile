@@ -19,9 +19,11 @@ pipeline {
      stage('init') {
          steps {
            script {
-         	 echo "Checking git workflow"
-             String gitWorkFlow = gitWorkFlowTypeByBranchRule()
-             echo "gitWorkFlow: ${gitWorkFlow}"   
+         	 def branchName = 'feature/test'
+			 BranchRule rule = new BranchRule(branchName)
+             def result = rule.getGitWorkFlow()
+
+             echo "result: ${result}"   
          	}
          }
 
