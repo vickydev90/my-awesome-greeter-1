@@ -6,8 +6,6 @@
 
 def nodeJS = new com.jenkins.library.NodeJS()
 
-def configuration = "/conf/config.json"
-
 pipeline {
   agent any  
     stages {
@@ -32,7 +30,7 @@ pipeline {
            script {
 	   	     nodeJS.npm('install --save-dev typescript')
 	   	     nodeJS.npmRun('build', env.branch)
-	   	     nodeJS.publishNexus(env.branch)
+	   	    // nodeJS.publishNexus(env.branch)
 	     }
 	     } 	
           }
