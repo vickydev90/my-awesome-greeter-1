@@ -2,7 +2,7 @@ application: test123
 distribution:
     dir: dist-release
 nexus:
-  url: http://dev-p76-app-16.sandbox.local:8081/nexus/content/repositories/thirdparty/com/banking
+  url: http://dev-p76-app-16.sandbox.local:8081/nexus/content/repositories/releases/com/lloydsbanking
   credentials: nexusLocal
 environments:
      targetEnv: qa
