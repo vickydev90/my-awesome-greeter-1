@@ -29,9 +29,9 @@ pipeline {
          steps {
            script {
              runTask()
-	   	     nodeJS.npm('install --save-dev typescript')
-	   	     nodeJS.npmRun('build', env.branch)
-	   	     nodeJS.publishNexus(env.branch)
+	   	     //nodeJS.npm('install --save-dev typescript')
+	   	     //nodeJS.npmRun('build', env.branch)
+	   	     //nodeJS.publishNexus(env.branch)
 	     }
 	     } 	
           }
