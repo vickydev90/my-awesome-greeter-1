@@ -1,17 +1,16 @@
 #!/usr/bin/groovy
 
 @Library('npmBuild_nix')
-@Library('workflow_gt')
-//@Library('gitflowEnablers_multi')
+@Library('workflow_gt') 
+@Library('buildnpm') _
 
-def nodeJS = new com.jenkins.library.NodeJS()
 
 pipeline {
-  agent any  
+  agent any 
     stages {
   	 stage('Checkout') {  
 	     steps {
-		checkout scm
+			checkout scm
 	     }
          }
      stage('init') {
@@ -27,11 +26,12 @@ pipeline {
       }
      stage('build') {
          steps {
-           script {
-	   	     nodeJS.npm('install --save-dev typescript')
+           //script {
+	   	     runNpm()
+	   	     //nodeJS.npm('install --save-dev typescript')
 	   	     //nodeJS.npmRun('build', env.branch)
 	   	     //nodeJS.publishNexus(env.branch)
-	     }
+	     //}
 	     } 	
           }
     }
