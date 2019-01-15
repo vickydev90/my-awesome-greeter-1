@@ -8,4 +8,6 @@ environments:
      targetEnv: qa
      targetbranch: 
 prefix: /usr/local/bin
-
+node:
+   npm_goals: install
+   npmRun_goals: build
