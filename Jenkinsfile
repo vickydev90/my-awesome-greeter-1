@@ -28,6 +28,7 @@ pipeline {
          steps {
            //script {
 	   	     runNpm("npm")
+	   	     runNpm("npm run")
 	   	     //nodeJS.npm('install --save-dev typescript')
 	   	     //nodeJS.npmRun('build', env.branch)
 	   	     //nodeJS.publishNexus(env.branch)
