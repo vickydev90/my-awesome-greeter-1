@@ -11,3 +11,4 @@ prefix: /usr/local/bin
 node:
    npm_goals: install --save-dev typescript
    npmRun_goals: build
+packageVersion: 1.1
