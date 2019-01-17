@@ -9,5 +9,5 @@ environments:
      targetbranch: 
 prefix: /usr/local/bin
 node:
-   npm_goals: install
+   npm_goals: install --save-dev typescript
    npmRun_goals: build
